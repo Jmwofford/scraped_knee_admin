@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location_id: MyString
+  state_abbrev: MyString
+  state: MyString
+  latitude: MyString
+  longitude: MyString
+
+two:
+  location_id: MyString
+  state_abbrev: MyString
+  state: MyString
+  latitude: MyString
+  longitude: MyString

@@ -5,8 +5,8 @@ require 'openssl'
 require 'net/http'
 require 'uri'
 
-module DataScraping
-  class Scraper < ApplicationRecord::Base
+module Datascraping
+  class Scraper < ApplicationRecord
     def self.scraper
       uri = URI.parse("https://www.nba.com/players/active_players.json")
       request = Net::HTTP::Get.new(uri)
@@ -29,7 +29,7 @@ module DataScraping
 
       json = JSON.parse fetched
       json.map do |pool|
-        name = pool["firstName"]+ pool["lastName"]
+        name = pool["firstName"]+ pool["lastName"] 
         position = pool["pos"] + " : " + pool["posExpanded"]
         team = pool["teamData"]["tricode"]+""+pool["teamData"]["nickname"]
         height= pool["heightFeet"] + "'"+pool["heightInches"]
