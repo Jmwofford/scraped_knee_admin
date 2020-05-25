@@ -29,9 +29,9 @@ module Datascraping
 
       json = JSON.parse fetched
       json.map do |pool|
-        name = pool["firstName"]+ pool["lastName"] 
+        name = pool["firstName"]+" "+ pool["lastName"] 
         position = pool["pos"] + " : " + pool["posExpanded"]
-        team = pool["teamData"]["tricode"]+""+pool["teamData"]["nickname"]
+        team = pool["teamData"]["tricode"]+" "+pool["teamData"]["nickname"]
         height= pool["heightFeet"] + "'"+pool["heightInches"]
         site = "http://www.nba.com"
 
